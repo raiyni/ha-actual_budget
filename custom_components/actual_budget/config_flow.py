@@ -79,10 +79,10 @@ class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                 data=user_input,
             )
 
-    async def _test_connection(self, endpoint, password, cert, encrypt_password, file):
-        return await self.hass.async_add_executor_job(self.test_connection_sync, endpoint, password, cert, encrypt_password, file)
+    async def _test_connection(self, endpoint, password, file, cert, encrypt_password):
+        return await self.hass.async_add_executor_job(self.test_connection_sync, endpoint, password, file, cert, encrypt_password)
 
-    def test_connection_sync(self, endpoint, password, cert, encrypt_password, file):
+    def test_connection_sync(self, endpoint, password, file, cert, encrypt_password):
         try:
             with Actual(
                 base_url=endpoint,
