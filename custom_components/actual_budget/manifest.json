@@ -12,6 +12,6 @@
     "requirements": [
       "actualpy @ git+https://github.com/raiyni/actualpy-pydanticv1.git@pydanticv1"
     ],
-    "version": "1.0.0b"
+    "version": "0.1.0"
   }
   
