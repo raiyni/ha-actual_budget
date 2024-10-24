@@ -1,0 +1,36 @@
+{
+  "title": "Actual Budget",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Login",
+        "description": "Login to Actual Budget",
+        "data": {
+          "endpoint": "Actual Budget URL",
+          "password": "Password",
+          "encrypt_password": "Encryption Password",
+          "file": "Sync/File ID",
+          "cert": "Certificate",
+          "unit": "Unit"
+        },
+        "data_description": {
+          "endpoint": "The URL of the Actual Budget server",
+          "password": "The password of the Actual Budget server",
+          "encrypt_password": "The encryption password of the Actual Budget file",
+          "file": "The file id of the Actual Budget server",
+          "cert": "The certificate of the Actual Budget server, leave blank to skip certificate validation",
+          "unit": "The currency of the Actual Budget server"
+        }
+      }
+    },
+    "error": {
+      "failed_to_connect": "Failed to connect",
+      "failed_cert": "Failed to connect: certificate error",
+      "failed_file": "Failed to connect: invalid file id",
+      "failed_unknown": "Failed to connect: unknown error"
+    },
+    "abort": {
+      "already_configured": "Device is already configured"
+    }
+  }
+}

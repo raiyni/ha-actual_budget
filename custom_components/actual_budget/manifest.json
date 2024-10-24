@@ -1,0 +1,17 @@
+{
+    "domain": "actual_budget",
+    "name": "Actual Budget Integration",
+    "codeowners": [
+      "@raiyni"
+    ],
+    "config_flow": true,
+    "dependencies": [],
+    "documentation": "https://github.com/raiyni/ha-actual_budget/blob/main/README.md",
+    "iot_class": "cloud_polling",
+    "issue_tracker": "https://github.com/raiyni/ha-actual_budget/issues",
+    "requirements": [
+      "actualpy @ git+https://github.com/raiyni/actualpy-pydanticv1.git@pydanticv1"
+    ],
+    "version": "1.0.0b"
+  }
+  
