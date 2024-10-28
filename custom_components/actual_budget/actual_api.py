@@ -94,21 +94,8 @@ class ActualApi:
             amount = budget_raw.get_amount()
             month = str(budget_raw.month)
 
-            spent = self.get_budget_spent(category.id)
+            spent = budget_raw.balance
 
             budget = Budget(name=category.name, budgeted=float(amount), id=id, group=category.group.name, month=month, spent=float(spent))
             budgets[id] = budget
         return budgets
-    
-    def get_budget_spent(self, name=str) -> Decimal:
-        total = Decimal(0)
-        start_date = datetime.date.today().replace(day=1)
-        last_date = datetime.datetime(start_date.year,start_date.month,1) + datetime.timedelta(days=calendar.monthrange(start_date.year,start_date.month)[1] - 1)
-        query = _transactions_base_query(self.actual.session, start_date, last_date) \
-            .filter(Transactions.category_id == name)
-        
-        transactions: Transactions = self.actual.session.exec(query).all()
-        for t in transactions:
-            total += t.get_amount()
-
-        return total
