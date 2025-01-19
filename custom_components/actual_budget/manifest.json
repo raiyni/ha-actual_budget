@@ -9,9 +9,7 @@
     "documentation": "https://github.com/raiyni/ha-actual_budget/blob/main/README.md",
     "iot_class": "cloud_polling",
     "issue_tracker": "https://github.com/raiyni/ha-actual_budget/issues",
-    "requirements": [
-      "actualpy @ git+https://github.com/raiyni/actualpy-pydanticv1.git@0.7.0"
-    ],
-    "version": "0.2.1"
+    "requirements": ["actualpy@git+https://github.com/bvanelli/actualpy.git@main"],
+    "version": "0.4.0"
   }
   
